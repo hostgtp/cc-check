@@ -33,7 +33,7 @@ if(strpos($message, "/start") === 0){
 if(!isBanned($userId) && !isMuted($userId)){
 
   if($userId == $config['adminID']){
-    $messagesec = "<b>Type /admin to know admin commands</b>";
+    $messagesec = "<b>Type /admin để biết các lệnh quản trị</b>";
   }
 
     addUser($userId);
@@ -41,7 +41,7 @@ if(!isBanned($userId) && !isMuted($userId)){
         'chat_id'=>$chat_id,
         'text'=>"<b>Hello @$username,
 
-Type /cmds to know all my commands!</b>
+Type /cmds để biết tất cả các lệnh của tôi!</b>
 
 $messagesec",
 	'parse_mode'=>'html',
@@ -116,9 +116,9 @@ if(strpos($message, "/cmds") === 0 || strpos($message, "!cmds") === 0){
     bot('editMessageText',[
     'chat_id'=>$callbackchatid,
     'message_id'=>$callbackmessageid,
-    'text'=>"<b>━━Other Commands━━</b>
+    'text'=>"<b>━━Các lệnh khác━━</b>
   
-<b>/me | !me</b> - Your Info
+<b>/me | !me</b> - Thông tin của bạn
 <b>/stats | !stats</b> - Checker Stats
 <b>/key | !key</b> - SK Key Checker
 <b>/bin | !bin</b> - Bin Lookup
